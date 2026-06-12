@@ -1,0 +1,29 @@
+# [package]
+# name = "hello-world"
+# version = "0.0.0"
+# edition = "2021"
+# publish = false
+
+# [lib]
+# crate-type = ["lib", "cdylib"]
+# doctest = false
+
+# [dependencies]
+# soroban-sdk = { workspace = true }
+
+# [dev-dependencies]
+# soroban-sdk = { workspace = true, features = ["testutils"] }
+[package]
+name = "decentralized_black_box"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+soroban-sdk = "20.0.0" # Chọn phiên bản SDK phù hợp với Soroban Studio hiện tại
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
