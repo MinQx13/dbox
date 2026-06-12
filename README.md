@@ -35,7 +35,7 @@ buy_insurance(env: Env, driver: Address) Allows a driver to purchase or extend t
 trigger_compensation(env: Env, incident_id: BytesN<32>, driver: Address, victim: Address, video_hash: BytesN<32>, damage_level: u32) Invoked exclusively by the authorized ai_server to process a claim. It validates the driver's active insurance status, dynamically evaluates the damage_level to calculate tier-based compensation (Level 1: 500, Level 2: 1000, Level 3: 1500), and records a permanent, unalterable AccidentReport onto the ledger storage.
 
 Project Setup Guide
-1. Prerequisites
+Prerequisites
 Ensure you have the following installed on your local machine or available in your development environment:
 
 Rust toolchain (with wasm32-unknown-unknown target)
